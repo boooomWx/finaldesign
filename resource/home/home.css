@@ -1,0 +1,190 @@
+body {
+    background-color: #EBEBEB;
+}
+p,hr {
+    margin: 0;
+}
+.lighter-font {
+    font-weight: lighter;
+}
+i {
+    color: white;
+}
+
+/** 基础导航栏**/
+.container {
+    background-color: white;
+    padding: 0;
+    width:100% !important;
+}
+.userinfo-nav {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    color: white;
+    height: 40px;
+}
+#city-location ,#user-icon{
+    width: 18%;
+    text-align: center;
+}
+#search-input {
+    position: relative;
+    width: 64%;
+    border: none;
+}
+input {
+    outline: none;
+    padding-left: 20px;
+}
+input::placeholder{
+    text-align: center;
+}
+.search-icon {
+    position: absolute;left: 21%;z-index:5;
+    color: grey;
+}
+.search-box {
+    height: 28px;
+    border-radius: 14px;
+}
+
+/** 目录导航栏 **/
+.category_nav {
+    background-color: white;
+    display: flex;
+    flex-wrap:wrap;
+    padding-bottom: 10px;
+}
+.category-item {
+    display: block;
+    width: 20%;
+}
+.category_img {
+    width: 60%;
+    /*height: 70%;*/
+    margin: 15%;
+}
+.category_desc {
+    text-align: center;
+    margin-top: -5px;
+}
+
+/** 附近拼团 **/
+.nearby {
+    background-color: white;
+    margin-top: 10px;
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+.module-nav {
+    display:flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+.nearby-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0 10px;
+}
+.nearby-item-detail {
+    margin-left: 10px;
+    display: block;
+}
+.nearby-img {
+    width: 22%;
+}
+
+.nearby-item-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.nearby-item-desc {
+    font-size: 10px;
+    font-weight: lighter;
+}
+.nearby-price-part {
+    display: flex;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+.price {
+    color: orangered;
+    padding-right: 10px;
+}
+.price-currency {
+    font-size: 20px;
+}
+.old-price {
+    text-decoration:line-through;
+}
+
+/**goodlist**/
+a{
+    color: #333;
+}
+a:active {
+    color: #333;
+    text-decoration: none;
+}
+.lighter-font {
+    font-weight: lighter;
+}
+.goodlist {
+    margin-top: 10px;
+    background-color: white;
+}
+.good-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0 10px;
+}
+.item-img {
+    width: 22%;
+}
+.good-item-detail {
+    width: 75%;
+    margin-left: 10px;
+    display: block;
+}
+.shop-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.distance {
+    font-size: 10px;
+}
+.shop-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.shop-address {
+    font-size: 10px;
+    font-weight: lighter;
+}
+.item-price-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+.price-part {
+    display: flex;
+    align-items: flex-end;
+}
+.now-price-part {
+    color: orangered;
+    padding-right: 10px;
+}
+.now-price {
+    font-size: 20px;
+}
+.sold-num {
+    font-size: 10px;
+}
+.no-more {
+    text-align: center;
+}

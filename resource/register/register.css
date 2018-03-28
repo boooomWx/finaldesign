@@ -1,0 +1,25 @@
+body{
+    height: 100%;
+    background: radial-gradient(circle,white,lightgreen);
+    -moz-background: radial-gradient(circle,white,lightgreen);
+    -webkit-background: radial-gradient(circle,white,lightgreen);
+    -o--background: radial-gradient(circle,white,lightgreen);
+}
+
+.register-header {
+    font-family: 黑体;
+    text-align: center;
+    margin:20% 0 10%;
+}
+
+.register-body {
+    width: 60%;
+    margin-left: 20%;
+}
+input {
+    margin-top: 20px;
+}
+#submit-button {
+    width: 100%;
+    margin-top: 20%;
+}
