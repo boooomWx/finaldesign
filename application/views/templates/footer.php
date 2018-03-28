@@ -1,3 +1,3 @@
-<em>&copy; 2018</em>
+<?php staticJs($page) ?>
 </body>
 </html>

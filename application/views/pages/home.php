@@ -1,0 +1,138 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: boom
+ * Date: 2018/3/10
+ * Time: 19:26
+ */
+
+include APPPATH . 'views/templates/header.php';
+
+?>
+<div class="container">
+    <div class="userinfo-nav">
+        <p id="city-location">杭州<span class="caret"></span></p>
+        <i class="search-icon fa fa-search fa-1x"></i>
+        <input type="text" id="search-input" placeholder="输入商户名、地点，找美食" class="search-box">
+        <a id="user-icon"><i class="fa fa-user-circle fa-2x"></i></a>
+    </div>
+</div>
+
+
+<div class="category_nav">
+    <div class="category-item">
+        <a href="<?php echo base_url().'index.php/item/category_item?category=hot_pot'?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+            <p class="category_desc">美食</p>
+        </a>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+    <div class="category-item">
+        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+        <p class="category_desc">美食</p>
+    </div>
+</div>
+
+<div class="nearby">
+    <div class="content">
+        <div class="module-nav">
+            <p class="module-title lighter-font">附近拼团</p>
+            <p class="module-more lighter-font">更多></p>
+        </div>
+        <?php if (empty($nearby_items)): ?>
+            <!-- 对不起暂时没有数据 -->
+        <?php else: ?>
+            <?php foreach ($nearby_items as $item): ?>
+                <a href="<?php echo base_url() . 'index.php/item_detail/index?iid=' . $item->id ?>">
+                    <div class="nearby-item">
+                        <img src="<?php echo $item->image ?>" class="nearby-img">
+                        <div class="nearby-item-detail">
+                            <p class="nearby-item-title"><?php echo $item->title ?></p>
+                            <p class="nearby-item-desc"><?php echo $item->shop->address ?></p>
+                            <div class="nearby-price-part">
+                                <div class="price"><span>5人团￥</span><span
+                                            class="price-currency"><?php echo $item->price ?></span></div>
+                                <span class="lighter-font">￥</span><span
+                                        class="old-price lighter-font"><?php echo $item->old_price ?></span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <hr/>
+            <?php endforeach; ?>
+        <?php endif; ?>
+    </div>
+</div>
+<div class="goodlist">
+    <div class="content">
+        <div class="module-nav">
+            <p class="lighter-font">猜你喜欢</p>
+        </div>
+        <?php if (empty($items)): ?>
+            <!-- 对不起暂时没有数据 -->
+        <?php else: ?>
+            <?php foreach ($items as $item): ?>
+                <a href="<?php echo base_url() . 'index.php/item_detail/index?iid=' . $item->id ?>">
+                    <div class="good-item">
+                        <img class="item-img" src="<?php echo $item->image; ?>">
+                        <div class="good-item-detail">
+                            <div class="shop-part">
+                                <p class="shop-name"><?php echo $item->shop->shop_name; ?></p>
+                                <p class="distance lighter-font"><?php echo $item->distance; ?></p>
+                            </div>
+                            <p class="shop-address"><?php echo $item->shop->address; ?></p>
+                            <div class="item-price-part">
+                                <div class="price-part">
+                                    <div class="now-price-part"><span>￥</span><span
+                                                class="now-price"><?php echo $item->price; ?></span></div>
+                                    <span>￥</span><span
+                                            class="old-price lighter-font"><?php echo $item->old_price; ?></span>
+                                </div>
+                                <div class="sold-num lighter-font">已售<?php echo $item->sold_num; ?></div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <hr/>
+            <?php endforeach; ?>
+        <?php endif; ?>
+        <div id="goodlist">
+        </div>
+    </div>
+</div>
+<p class="no-more">没有更多了，到别处看看</p>
+
+<?php
+include APPPATH . 'views/templates/footer.php';
+?>

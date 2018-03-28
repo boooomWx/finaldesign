@@ -1,0 +1,74 @@
+/**goodlist**/
+p {
+    margin: 0;
+}
+a{
+    color: #333;
+}
+a:active {
+    color: #333;
+    text-decoration: none;
+}
+.lighter-font {
+    font-weight: lighter;
+}
+.border-font {
+    font-weight: bolder;
+}
+.goodlist {
+    margin-top: 10px;
+    background-color: white;
+}
+.good-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 0 10px;
+}
+.item-img {
+    width: 22%;
+}
+.good-item-detail {
+    width: 75%;
+    margin-left: 10px;
+    display: block;
+}
+.shop-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.distance {
+    font-size: 10px;
+}
+.shop-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+.shop-address {
+    font-size: 10px;
+    font-weight: lighter;
+}
+.item-price-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-top: 10px;
+}
+.price-part {
+    display: flex;
+    align-items: flex-end;
+}
+.now-price-part {
+    color: orangered;
+    padding-right: 10px;
+}
+.now-price {
+    font-size: 20px;
+}
+.sold-num {
+    font-size: 10px;
+}
+.no-more {
+    margin-top: 10px;
+    text-align: center;
+}

@@ -1,0 +1,121 @@
+body {
+    padding: 30px 0 70px;
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+.nav-top {
+    background-color: black;
+    color: white;
+}
+.item-title {
+    margin: 15px 0 0 10px;
+}
+.sold-part {
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: 5px 0 5px;
+}
+.item-detail-img {
+    width: 45%;
+    margin-right: 4%;
+}
+.item-info {
+    margin-top: 30px;
+}
+.item-info-title {
+    font-size: 15px;
+}
+.item-info-desc {
+    display: flex;
+    justify-content: space-between;
+}
+.tip-title {
+    margin-top: 30px;
+}
+.tip-info-title {
+    margin-bottom: -5px;
+}
+
+.shop-info-content {
+    margin-top: 30px;
+}
+.shop-info {
+    display: flex;
+    align-items: flex-start;
+}
+.shop-image {
+    width: 25%;
+}
+.shop-desc {
+    display: block;
+    width: 100% ;
+    margin-left: 10px;
+}
+.shop-name-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.phone {
+    color: orangered;
+}
+.shop-score {
+    font-size: 10px;
+    color: orangered;
+}
+.address {
+    font-size: 12px;
+    margin-top: 5px;
+}
+.fa-map-marker {
+    margin-right: 5px;
+}
+.comments {
+    margin-top: 30px;
+}
+.comment-error {
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.comment-error-content {
+    text-align: center;
+    margin-top: 10px;
+}
+.bottom-nav {
+    display: flex;
+    text-align: center;
+    height: 8%;
+    background-color: white;
+}
+.item-detail-price-part {
+    width: 50%;
+    background-color: #F2F2F2;
+}
+.discount-part {
+    display: flex;
+    align-items: flex-end;
+    color: orange;
+    margin-top: 5px;
+}
+.item-detail-now-price {
+    margin-left: 30%;
+    font-size: 16px;
+}
+.discount {
+    margin-left: 10px;
+    font-size: 10px;
+}
+.item-detail-old-price {
+    font-size: 12px;
+}
+.buy-button {
+    width: 50%;
+    background-color: orange;
+    text-align: center;
+    font-size: 20px;
+    padding-top: 10px;
+}

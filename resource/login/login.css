@@ -1,0 +1,39 @@
+hr,p {
+    margin: 0;
+}
+.user-avatar {
+    width: 30%;
+    height: 30%;
+    margin: 30% 35%;
+}
+.account-content {
+    width: 60%;
+    margin: 0 20%;
+}
+#tel, #password, #submit-button {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+}
+
+#tel, #password {
+    border: none;
+    outline: medium;
+}
+#tel::placeholder, #password::placeholder {
+    text-align: center;
+}
+#submit-button {
+    margin-top: 40px;
+    border: none;
+}
+.login-more {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0;
+}
+a {
+    color: #5bc0de;
+}
