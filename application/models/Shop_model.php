@@ -6,6 +6,8 @@
  * Time: 13:50
  */
 
+require_once APPPATH . '/models/Base_Model.php';
+
 class Shop_model extends Base_Model
 {
 

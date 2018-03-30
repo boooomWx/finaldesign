@@ -26,7 +26,7 @@ class Account_Service extends Base_Service
         if (!$uid) {
             return [];
         }
-        $user_info = $this->user_model->get_by_uid($uid);
+        $user_info = $this->user_model->get_by_id($uid);
         return $user_info;
     }
 }

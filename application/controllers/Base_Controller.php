@@ -35,6 +35,20 @@ class Base_Controller extends REST_Controller
         $this->load->view($tplName, $data);
     }
 
+
+    /**
+     * 需要登录
+     */
+
+    public function needLogin(){
+        $this->load->service('user/user_service');
+        $isLogin = $this->user_service->is_login();
+        if(!$isLogin){
+            $this->redirect('/user/login');
+        }
+    }
+
+
     /**
      * 封装api请求成功函数
      */

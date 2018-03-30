@@ -1,0 +1,112 @@
+body {
+    padding-top: 30px;
+    /*background-color: #EBEBEB;*/
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+hr{
+    margin: 10px 0 0;
+}
+.separate-part {
+    height: 15px;
+    background-color: #EBEBEB;
+}
+/**头部返回栏**/
+.nav-top {
+    background-color: black;
+    color: white;
+}
+.shop-info-content {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.shop-image {
+    width: 35%;
+}
+.shop-desc {
+    margin-left: 20px;
+}
+.shop-score, .shop-detail-score ,.shop-category{
+    font-size: 13px;
+    margin-top: 10px;
+}
+.second-shop-info-part {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 10px 0 10px;
+}
+.map-icon {
+    margin: 0 10px 0 10px;
+}
+.shop-distance {
+    font-size: 12px;
+}
+.phone-part {
+    color: orange;
+    margin-left: 35%;
+}
+.simple-goodlist {
+    margin-top: 10px;
+}
+.simple-good-item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+.simple-item-image {
+    width: 20%;
+    margin-left: 5%;
+}
+.item-desc {
+    width: 60%;
+    padding-left: 10px;
+}
+.price-part {
+    margin-top: 10px;
+}
+.simple-now-price {
+    color: orange;
+    font-size: 20px;
+}
+.simple-old-price {
+    text-decoration: line-through;
+}
+.simple-sold-num{
+    margin-top: 15px;
+}
+.comment-element {
+    display: flex;
+    align-items: flex-start;
+}
+.user-avatar {
+    width: 13%;
+}
+.user-nick-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-nick {
+    font-size: 20px;
+}
+.comment-score {
+    color: orangered;
+}
+.comment-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 3%;
+}
+.comment-error {
+    height: 50px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.comment-error-content {
+    text-align: center;
+    margin-top: 10px;
+}

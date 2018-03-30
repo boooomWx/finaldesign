@@ -11,7 +11,8 @@ include APPPATH . 'views/templates/header.php';
 ?>
 <div class="nav-top navbar-fixed-top">
     <div class="content">
-        <i class="fa fa-angle-left fa-2x"></i></div>
+        <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"></i>
+    </div>
 </div>
 <div class="content">
     <div class="item-detail">
@@ -54,7 +55,7 @@ include APPPATH . 'views/templates/header.php';
         </div>
     </div>
 
-    <div class="shop-info-content">
+    <a href="<?php echo base_url().'index.php/shop/index?shop_id='.$item_detail->shop->id?>"><div class="shop-info-content">
         <h3>餐厅介绍</h3>
         <div class="shop-info">
             <img src="<?php echo $item_detail->shop->image; ?>" class="shop-image">
@@ -68,7 +69,7 @@ include APPPATH . 'views/templates/header.php';
                     | <?php echo $item_detail->shop->address; ?></p>
             </div>
         </div>
-    </div>
+        </div></a>
 
     <div class="comments">
         <h3>用户评论</h3>
@@ -78,13 +79,21 @@ include APPPATH . 'views/templates/header.php';
                     <img src="<?php echo $comment->avatar; ?>" class="user-avatar">
                     <div class="comment-info">
                         <div class="user-nick-part">
-                            <p class="user-nick"><?php echo $comment->nick; ?></p>
+                            <p class="user-nick border-font"><?php echo $comment->name; ?></p>
                             <p class="comment-date"><?php echo $comment->gmt_create; ?></p>
                         </div>
-                        <p class="comment-score"><?php echo $comment->score; ?></p>
+                        <p class="comment-score"><?php echo $comment->score; ?>分</p>
                         <p class="comment-content"><?php echo $comment->content; ?></p>
+                        <div class="comment-image-part">
+                            <?php if (!empty($comment->images)): ?>
+                                <?php foreach ($comment->images as $image): ?>
+                                    <img src="<?php echo $image;?>" class="comment-image">
+                                <?php endforeach; ?>
+                            <?php endif; ?>
+                        </div>
                     </div>
                 </div>
+                <hr/>
             <?php endforeach; ?>
         <?php else: ?>
             <div class="comment-error">
@@ -102,7 +111,7 @@ include APPPATH . 'views/templates/header.php';
         <p class="item-detail-old-price lighter-font">最高门市价￥<?php echo $item_detail->old_price; ?></p>
     </div>
     <div class="buy-button">
-        <a style="color: white">立即抢购</a>
+        <a style="color: white" href="<?php echo base_url().'index.php/trade/buy?iid='.$item_detail->id; ?>">立即抢购</a>
     </div>
 </div>
 

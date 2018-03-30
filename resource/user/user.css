@@ -1,0 +1,94 @@
+body {
+    padding-top: 30px;
+}
+.nav-top {
+    background-color: black;
+    color: white;
+}
+hr{
+    margin: 10px;
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+.user-content {
+    width: 20%;
+    margin: 5% 40% 0;
+}
+.user-avatar {
+    width: 75px;
+    border-radius: 75px;
+}
+.user-nick {
+    text-align: center;
+}
+.order-nav {
+    display: flex;
+    align-items: center;
+}
+.order-nav-item {
+    width: 25%;
+    text-align: center;
+}
+.nav-line {
+    height: 2px;
+    margin-top: 10px;
+}
+.current {
+    color: orange;
+}
+.current-line {
+    background-color: orange;
+}
+
+.no-more-order {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/**order-part**/
+.order-item {
+
+}
+.order-shop-part {
+    display: flex;
+    justify-content: space-between;
+}
+.order-shop-name {
+    font-size: 16px;
+}
+.order-desc {
+    display: flex;
+    align-items: self-start;
+}
+.order-img {
+    width: 20%;
+    background-color: white;
+}
+.order-second-desc {
+    width: 80%;
+    padding-top: 10px;
+    background-color: #EBEBEB;
+}
+.order-consume-time {
+    font-size: 10px;
+    margin-top: 5px;
+    padding-bottom: 23px;
+}
+.order-item-desc {
+    display: flex;
+    justify-content: space-between;
+}
+.more-button {
+    margin-top: 10px;
+    background-color: white;
+}
+.delete-button {
+    margin: 0 5% 0 50%;
+    border: 1px solid grey;
+}
+.again-button {
+    border: 1px solid orangered;
+    color: orangered;
+}
