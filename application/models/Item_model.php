@@ -43,6 +43,15 @@ class Item_model extends Base_Model {
         return $result;
     }
 
+    public function list_by_shop_id($shop_id) {
+        $shop_id = intval($shop_id);
+        if ($shop_id < 1) {
+            return false;
+        }
+        $result = $this->db->get_where('item', array('shop_id'=>$shop_id))->result();
+        return $result;
+    }
+
     public function list_by_ids($ids) {
         if (!is_array($ids)) {
             return false;

@@ -10,7 +10,7 @@ function doLogin() {
         }else {
             $.post('http://'+window.location.host+'/weixing/index.php/login/login_check',{tel:tel.val(),password:password.val()},function (data) {
                 if (data.success) {
-                    window.open('http://'+window.location.host+'/weixing/index.php/home/index');
+                    window.location.href = 'http://'+window.location.host+'/weixing/index.php/home/index';
                 } else {
                     alert(data.message)
                 }

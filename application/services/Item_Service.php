@@ -81,4 +81,10 @@ class Item_Service extends Base_Service {
         }
         return $distance;
     }
+
+    public function list_items_by_shop_id($shop_id) {
+        $items = $this->item_model->list_by_shop_id($shop_id);
+        return $items;
+    }
+
 }

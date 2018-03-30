@@ -14,7 +14,7 @@ class Comment_Service extends Base_Service {
     {
         parent::__construct();
         $this->load->model('comment_model');
-        $this->load->service('user_model');
+        $this->load->model('user_model');
     }
 
     public function get_item_comments($iid) {
@@ -25,13 +25,14 @@ class Comment_Service extends Base_Service {
         $comments = $this->comment_model->list_by_iid($iid);
         if (!empty($comments)) {
             foreach ($comments as $comment) {
-                $comment->avatar = 'default';
-                $comment->nick = '火星人';
+                $comment->avatar = base_url().'/resource/img/default-user-img2.jpg';
                 $user_info = $this->user_model->get_by_id($comment->uid);
-                if ($user_info) {
-                    $comment->avatar = $user_info->avatar;
-                    $comment->nick = $user_info->nick;
+                if ($user_info['avatar']) {
+                    $comment->avatar = $user_info['avatar'];
                 }
+                $comment->name = $user_info['name'];
+                $comment->images = explode( ',',$comment->image);
+                $comment->gmt_create = date('Y-m-d', $comment->gmt_create);
             }
         }
         return $comments;

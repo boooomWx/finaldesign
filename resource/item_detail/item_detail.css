@@ -5,6 +5,7 @@ body {
     width: 94%;
     margin-left: 3%;
 }
+/**头部返回栏**/
 .nav-top {
     background-color: black;
     color: white;
@@ -76,6 +77,29 @@ body {
 .comments {
     margin-top: 30px;
 }
+.comment-element {
+    display: flex;
+    align-items: flex-start;
+}
+.user-avatar {
+    width: 13%;
+}
+.user-nick-part {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.user-nick {
+    font-size: 20px;
+}
+.comment-score {
+    color: orangered;
+}
+.comment-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 3%;
+}
 .comment-error {
     height: 50px;
     border: 1px solid black;
@@ -93,6 +117,7 @@ body {
 }
 .item-detail-price-part {
     width: 50%;
+    height: 100%;
     background-color: #F2F2F2;
 }
 .discount-part {

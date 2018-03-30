@@ -16,6 +16,7 @@ class Login extends Base_Controller {
     }
 
     public function index_get() {
+        $this->session->sess_destroy();
         $is_login = $this->user_service->is_login();
         if($is_login){
             $this->redirect('/home/index');

@@ -19,7 +19,7 @@ class User_model extends Base_Model {
         return $result;
     }
 
-    public function get_by_uid($uid) {
+    public function get_by_id($uid) {
         $uid = intval($uid);
         if ($uid < 1) {
             return array();

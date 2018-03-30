@@ -11,10 +11,10 @@ include APPPATH . 'views/templates/header.php';
 ?>
 <div class="container">
     <div class="userinfo-nav">
-        <p id="city-location">杭州<span class="caret"></span></p>
+        <p id="city-location"><a href="<?php echo base_url().'/index.php/map/index'?>" style="color: white">杭州<span class="caret"></span></a></p>
         <i class="search-icon fa fa-search fa-1x"></i>
         <input type="text" id="search-input" placeholder="输入商户名、地点，找美食" class="search-box">
-        <a id="user-icon"><i class="fa fa-user-circle fa-2x"></i></a>
+        <a id="user-icon" href="<?php echo base_url().'index.php/user/index';?>"><i class="fa fa-user-circle fa-2x"></i></a>
     </div>
 </div>
 
