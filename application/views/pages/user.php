@@ -12,7 +12,7 @@ include APPPATH . 'views/templates/header.php';
 
     <div class="nav-top navbar-fixed-top">
         <div class="content">
-            <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"></i>
+            <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"><span class="page-title border-font"><?php echo $page_title;?></span></i>
         </div>
     </div>
     <div class="user-content">
@@ -41,11 +41,28 @@ include APPPATH . 'views/templates/header.php';
         </div>
 
         <div class="content">
+            <hr/>
             <div class="order-detail" id="order-detail">
-
             </div>
         </div>
     </div>
+<script>
+    function orderDelete(oid) {
+        $.get('http://'+window.location.host+'/weixing/index.php/user/order_delete',{oid:oid},function (data) {
+            if (data.success) {
+                alert('删除成功');
+                location.reload();
+            } else {
+                alert(data.message)
+            }
+        })
+    }
+
+    function itemDetail(iid) {
+        url = 'http://'+window.location.host+'/weixing/index.php/item_detail/index?iid='+iid;
+        window.location.href = 'http://'+window.location.host+'/weixing/index.php/item_detail/index?iid='+iid;
+    }
+</script>
 <?php
 include APPPATH . 'views/templates/footer.php';
 ?>

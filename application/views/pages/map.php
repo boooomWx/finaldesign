@@ -1,25 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link href="<?php echo base_url().'/resource/bootstrap/css/bootstrap.min.css';?>" rel="stylesheet">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link href="<?php echo base_url() . '/resource/bootstrap/css/bootstrap.min.css'; ?>" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <title>地图定位</title>
     <style type="text/css">
-        html{height:100%}
-        body{height:100%;margin:0px;padding:0px}
-        #container{height:100%}
+        html {
+            height: 100%
+        }
+        .content {
+            width: 94%;
+            margin-left: 3%;
+        }
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+
+        #container {
+            height: 100%
+        }
+
         .search-part {
             margin-top: 40px;
             width: 70%;
             position: absolute;
         }
+
+        /**头部返回栏**/
         .nav-top {
             position: absolute;
             background-color: black;
             color: white;
         }
+
+        .page-title {
+            font-size: 16px;
+            line-height: 28px;
+            padding-left: 135px;
+            font-weight: bolder;
+        }
+
         .map-location {
             position: absolute;
             z-index: 4;
@@ -31,16 +55,18 @@
             cursor: pointer;
             line-height: 26px;
             float: right;
-            box-shadow: 1px 2px 1px rgba(0,0,0,.15);
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, .15);
         }
+
         .map-location span {
             width: 14px;
             height: 14px;
             vertical-align: middle;
             display: inline-block;
             background: url(//webmap0.bdimg.com/wolfman/static/common/images/ipLocation/ipLocation_ac75181.png);
-            background-size: 76px,auto;
+            background-size: 76px, auto;
         }
+
         .map-location .location-icon {
             background-position: -28px 0;
         }
@@ -52,14 +78,18 @@
 
 <body>
 <div class="nav-top navbar-fixed-top">
-        <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"></i>
+    <div class="content">
+        <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"><span
+                    class="page-title"><?php echo $page_title; ?></span></i>
+    </div>
 </div>
 
 <div class="search-part">
     <div class="input-group">
         <input type="text" id="suggestId" class="form-control" size="20" placeholder="请输入地址检索"/>
         <span class="input-group-btn">
-            <button class="btn btn-info" type="submit" onclick="document.getElementById('suggestId').value=''">清除</button>
+            <button class="btn btn-info" type="submit"
+                    onclick="document.getElementById('suggestId').value=''">清除</button>
         </span>
     </div>
     <div class="map-location"><a onclick="getLocation()"><span class="location-icon"></span></a></div>
@@ -69,7 +99,7 @@
 <script type="text/javascript">
     var map = new BMap.Map("container");
     // 创建地图实例
-    var point = new BMap.Point(120.015245,30.295158);
+    var point = new BMap.Point(120.015245, 30.295158);
     // 创建点坐标
     map.centerAndZoom(point, 15);
     map.enableScrollWheelZoom(true);
@@ -141,14 +171,14 @@
         var geolocation = new BMap.Geolocation();
         // 开启SDK辅助定位
         geolocation.enableSDKLocation();
-        geolocation.getCurrentPosition(function(r){
-            if(this.getStatus() == BMAP_STATUS_SUCCESS){
+        geolocation.getCurrentPosition(function (r) {
+            if (this.getStatus() == BMAP_STATUS_SUCCESS) {
                 var mk = new BMap.Marker(r.point);
                 map.addOverlay(mk);
                 map.panTo(r.point);
             }
             else {
-                alert('failed'+this.getStatus());
+                alert('failed' + this.getStatus());
             }
         });
     }

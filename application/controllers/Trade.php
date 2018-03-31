@@ -44,7 +44,7 @@ class Trade extends Base_Controller {
         }
         $result = $this->trade_service->create_order($iid,$sid,$title,$price,$num,$image);
         if ($result) {
-            $this->redirect('/trade/submit?oid='.$result.'&title='.$title.'&price='.$price);
+            $this->redirect('/trade/submit?oid='.$result.'&title='.$title.'&price='.$price*$num);
         } else {
             echo '创建订单失败';
         }

@@ -5,7 +5,7 @@ $(document).ready(function () {
     var totalHeight = 0;
     var goodlist = '';
     $(window).scroll(function () {
-        var srollPos = $(window).scrollTop();console.log($(document).height());
+        var srollPos = $(window).scrollTop();
         totalHeight = parseFloat(srollPos) + parseFloat($(window).height());
         if (totalHeight >= $(document).height() && num < maxNum) {
             $.get('http://'+window.location.host+'/weixing/index.php/item/item',{page:num,page_size:page_size},function (data) {
