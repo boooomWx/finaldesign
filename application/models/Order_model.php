@@ -72,7 +72,7 @@ class Order_model extends Base_Model
             $page_size = 10;
         }
         $status = implode(',', $status);
-        $result = $this->db->query('SELECT * FROM  `order` WHERE uid = ? AND `status` in (?) limit ?,?', array($uid, $status, ($page - 1) * $page_size, $page_size))->result();
+        $result = $this->db->query('SELECT * FROM  `order` WHERE uid = ? AND `status` in (?) ORDER BY id DESC limit ?,?', array($uid, $status, ($page - 1) * $page_size, $page_size))->result();
         return $result;
     }
 }

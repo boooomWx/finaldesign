@@ -12,7 +12,7 @@ $(document).ready(function () {
                     '                        <p class="order-shop-name border-font">'.concat(data.data[i].shop_name),'</p>\n' +
                     '                        <p class="order-status lighter-font">'.concat(data.data[i].status),'</p>\n' +
                     '                    </div>\n' +
-                    '                    <div class="order-desc">\n' +
+                    '                    <a href="http://'+window.location.host+'/weixing/index.php/user/order_detail?oid='+data.data[i].id,'"><div class="order-desc">\n' +
                     '                        <img class="order-img" src="'.concat(data.data[i].image),'">\n' +
                     '                        <div class="order-second-desc">\n' +
                     '                            <div class="order-item-desc">\n' +
@@ -21,10 +21,10 @@ $(document).ready(function () {
                     '                            </div>\n' +
                     '                            <p class="order-consume-time">'.concat(data.data[i].gmt_modified),'</p>\n' +
                     '                        </div>\n' +
-                    '                    </div>\n' +
+                    '                    </div></a>\n' +
                     '                    <div class="more-part">\n' +
-                    '                        <button class="delete-button more-button">删除订单</button>\n' +
-                    '                        <button class="again-button more-button">再次购买</button>\n' +
+                    '                        <button class="delete-button more-button" onclick="javascript:orderDelete('.concat(data.data[i].id),')">删除订单</button>\n' +
+                    '                        <button class="again-button more-button" onclick="javascript:itemDetail('.concat(data.data[i].iid),')">再次购买</button>\n' +
                     '                    </div>\n' +
                     '                </div>\n' +
                     '                <hr/>')
@@ -49,7 +49,7 @@ $(document).ready(function () {
                         '                        <p class="order-shop-name border-font">'.concat(data.data[i].shop_name),'</p>\n' +
                         '                        <p class="order-status lighter-font">'.concat(data.data[i].status),'</p>\n' +
                         '                    </div>\n' +
-                        '                    <div class="order-desc">\n' +
+                        '                    <a href="http://'+window.location.host+'/weixing/index.php/user/order_detail?oid='+data.data[i].id,'"><div class="order-desc">\n' +
                         '                        <img class="order-img" src="'.concat(data.data[i].image),'">\n' +
                         '                        <div class="order-second-desc">\n' +
                         '                            <div class="order-item-desc">\n' +
@@ -58,9 +58,9 @@ $(document).ready(function () {
                         '                            </div>\n' +
                         '                            <p class="order-consume-time">'.concat(data.data[i].gmt_modified),'</p>\n' +
                         '                        </div>\n' +
-                        '                    </div>\n' +
+                        '                    </div></a>\n' +
                         '                    <div class="more-part">\n' +
-                        '                        <button class="delete-button more-button">删除订单</button>\n' +
+                        '                        <button class="delete-button more-button" onclick="javascript:orderDelete('.concat(data.data[i].id),')">删除订单</button>\n' +
                         '                        <button class="again-button more-button">再次购买</button>\n' +
                         '                    </div>\n' +
                         '                </div>\n' +
@@ -86,7 +86,7 @@ $(document).ready(function () {
                         '                        <p class="order-shop-name border-font">'.concat(data.data[i].shop_name),'</p>\n' +
                         '                        <p class="order-status lighter-font">'.concat(data.data[i].status),'</p>\n' +
                         '                    </div>\n' +
-                        '                    <div class="order-desc">\n' +
+                        '                    <a href="http://'+window.location.host+'/weixing/index.php/user/order_detail?oid='+data.data[i].id,'"><div class="order-desc">\n' +
                         '                        <img class="order-img" src="'.concat(data.data[i].image),'">\n' +
                         '                        <div class="order-second-desc">\n' +
                         '                            <div class="order-item-desc">\n' +
@@ -95,9 +95,9 @@ $(document).ready(function () {
                         '                            </div>\n' +
                         '                            <p class="order-consume-time">'.concat(data.data[i].gmt_modified),'</p>\n' +
                         '                        </div>\n' +
-                        '                    </div>\n' +
+                        '                    </div></a>\n' +
                         '                    <div class="more-part">\n' +
-                        '                        <button class="delete-button more-button">删除订单</button>\n' +
+                        '                        <button class="delete-button more-button" onclick="javascript:orderDelete('.concat(data.data[i].id),')">删除订单</button>\n' +
                         '                        <button class="again-button more-button">再次购买</button>\n' +
                         '                    </div>\n' +
                         '                </div>\n' +
@@ -123,7 +123,7 @@ $(document).ready(function () {
                         '                        <p class="order-shop-name border-font">'.concat(data.data[i].shop_name),'</p>\n' +
                         '                        <p class="order-status lighter-font">'.concat(data.data[i].status),'</p>\n' +
                         '                    </div>\n' +
-                        '                    <div class="order-desc">\n' +
+                        '                    <a href="http://'+window.location.host+'/weixing/index.php/user/order_detail?oid='+data.data[i].id,'"><div class="order-desc">\n' +
                         '                        <img class="order-img" src="'.concat(data.data[i].image),'">\n' +
                         '                        <div class="order-second-desc">\n' +
                         '                            <div class="order-item-desc">\n' +
@@ -132,9 +132,9 @@ $(document).ready(function () {
                         '                            </div>\n' +
                         '                            <p class="order-consume-time">'.concat(data.data[i].gmt_modified),'</p>\n' +
                         '                        </div>\n' +
-                        '                    </div>\n' +
+                        '                    </div></a>\n' +
                         '                    <div class="more-part">\n' +
-                        '                        <button class="delete-button more-button">删除订单</button>\n' +
+                        '                        <button class="delete-button more-button" onclick="javascript:orderDelete('.concat(data.data[i].id),')">删除订单</button>\n' +
                         '                        <button class="again-button more-button">再次购买</button>\n' +
                         '                    </div>\n' +
                         '                </div>\n' +
@@ -160,7 +160,7 @@ $(document).ready(function () {
                         '                        <p class="order-shop-name border-font">'.concat(data.data[i].shop_name),'</p>\n' +
                         '                        <p class="order-status lighter-font">'.concat(data.data[i].status),'</p>\n' +
                         '                    </div>\n' +
-                        '                    <div class="order-desc">\n' +
+                        '                    <a href="http://'+window.location.host+'/weixing/index.php/user/order_detail?oid='+data.data[i].id,'"><div class="order-desc">\n' +
                         '                        <img class="order-img" src="'.concat(data.data[i].image),'">\n' +
                         '                        <div class="order-second-desc">\n' +
                         '                            <div class="order-item-desc">\n' +
@@ -169,9 +169,9 @@ $(document).ready(function () {
                         '                            </div>\n' +
                         '                            <p class="order-consume-time">'.concat(data.data[i].gmt_modified),'</p>\n' +
                         '                        </div>\n' +
-                        '                    </div>\n' +
+                        '                    </div></a>\n' +
                         '                    <div class="more-part">\n' +
-                        '                        <button class="delete-button more-button">删除订单</button>\n' +
+                        '                        <button class="delete-button more-button" onclick="javascript:orderDelete('.concat(data.data[i].id),')">删除订单</button>\n' +
                         '                        <button class="again-button more-button">再次购买</button>\n' +
                         '                    </div>\n' +
                         '                </div>\n' +
@@ -183,4 +183,14 @@ $(document).ready(function () {
             }
         })
     })
+
+    function orderDelete(oid) {
+        $.get('http://'+window.location.host+'/weixing/index.php/user/order_delete',{oid:oid},function (data) {
+              if (data.success) {
+                  alert('success');
+              } else {
+                  alert('failure')
+              }
+        })
+    }
 })

@@ -1,0 +1,59 @@
+body {
+    padding: 30px 0 0;
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+/**头部返回栏**/
+.nav-top {
+    background-color: black;
+    color: white;
+}
+.page-title {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 135px;
+}
+.page-title {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 135px;
+}
+.order-remind {
+    font-size: 10px;
+}
+.order-detail-part {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start;
+}
+.order-detail-img {
+    width: 20%;
+}
+.order-detail-desc {
+    width: 65%;
+    margin-left: 10px;
+}
+.order-detail-title,.order-price {
+    font-size: 16px;
+}
+.order-detail-name {
+    margin: 5px 0 5px;
+}
+.order-detail-icon {
+    margin-top: 20px;
+}
+.order-total-price,.order-num {
+    margin-top: 10px;
+}
+.order-create {
+    margin-top: 40px;
+}
+.tel {
+    margin-top: 10px;
+}
+.order-button {
+    margin-top: 50px;
+    text-align: center;
+}

@@ -18,6 +18,11 @@ hr{
     background-color: black;
     color: white;
 }
+.page-title {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 135px;
+}
 .shop-info-content {
     display: flex;
     align-items: flex-start;

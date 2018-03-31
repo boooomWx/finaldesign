@@ -12,7 +12,7 @@ include APPPATH . 'views/templates/header.php';
 
 <div class="nav-top navbar-fixed-top">
     <div class="content">
-        <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"></i>
+        <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"><span class="page-title border-font"><?php echo $page_title;?></span></i>
     </div>
 </div>
 

@@ -9,10 +9,9 @@
 include APPPATH . 'views/templates/header.php';
 
 ?>
-    <div class="content">
-        <div class="nav-top navbar-fixed-top">
-            <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"></i>
-            <p class="border-font page-title"><?php echo $page_title; ?></p>
+    <div class="nav-top navbar-fixed-top">
+        <div class="content">
+            <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"><span class="page-title"><?php echo $page_title;?></span></i>
         </div>
     </div>
     <div class="search-box">
