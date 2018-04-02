@@ -20,8 +20,8 @@ class SubmitPay
         $aop->postCharset= 'utf-8';
         $aop->format='json';
         $request = new AlipayTradePagePayRequest ();
-        $request->setReturnUrl(site_url('trade/success?oid='.$oid));
-        $request->setNotifyUrl(site_url('trade/pay'));
+        $request->setReturnUrl(site_url('index.php/trade/success?oid='.$oid));
+        $request->setNotifyUrl(site_url('index.php/trade/pay'));
         $request->setBizContent(json_encode($bizBody));
         $result = $aop->pageExecute ($request);
         return $result;

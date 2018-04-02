@@ -39,4 +39,12 @@ class User_model extends Base_Model {
 //        $result = $this->db->query('SELECT * FROM users WHERE tel = ?', array($tel))->row();
         return $result;
     }
+
+    public function update_by_id($id, $data) {
+        $now = time();
+        $data['gmt_modified'] = $now;
+        $str = $this->db->update_string('users', $data, array('id' => $id));
+        $result = $this->db->query($str);
+        return $result;
+    }
 }

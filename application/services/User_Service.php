@@ -29,6 +29,20 @@ class User_Service extends Base_Service {
     }
 
     /**
+     * 获取个人信息
+     */
+    public function get_user_info()
+    {
+        $uid = $this->session->user['uid'];
+        if (!$uid) {
+            return false;
+        }
+        $user_info = $this->user_model->get_by_id($uid);
+        return $user_info;
+    }
+
+
+    /**
      * 登录
      * @param $tel
      * @param $password
@@ -65,19 +79,13 @@ class User_Service extends Base_Service {
      * @param $password
      * @return array|string
      */
-    public function do_register($tel, $name, $password) {
-        $this->session->sess_destroy();
+    public function do_register($tel, $password,$verify_code) {
+        if ($verify_code != $this->session->verify_code) {
+            return '验证码错误';
+        }
         $tel_len = strlen($tel);
         if ($tel_len != 11) {
             return '手机号码不符合规范，请重试';
-        }
-        $is_name = $this->isName($name);
-        if (!$is_name) {
-            return '名字不符合规范,请重新输入';
-        }
-        $is_str_length = $this->is_str_length($name, self::$NAME_MIN_SIZE, self::$NAME_MAX_SIZE);
-        if (!$is_str_length) {
-            return '名字长度必须在2-7个汉字之间';
         }
         $have_special_char = $this->have_special_char($password);
         if ($have_special_char) {
@@ -90,12 +98,41 @@ class User_Service extends Base_Service {
         if ($user) {
             return '该手机号已经注册过，请登录';
         }
+        $name = '手机用户'.$tel;
         $res = $this->user_model->add($tel, $name, $password);
         if (!$res) {
             return '网络出现了点问题，请稍后再试';
         }
         return array("success" => true);
     }
+
+    public function change_password($tel, $password,$verify_code) {
+        if ($verify_code != $this->session->verify_code) {
+            return '验证码错误';
+        }
+        $tel_len = strlen($tel);
+        if ($tel_len != 11) {
+            return '手机号码不符合规范，请重试';
+        }
+        $have_special_char = $this->have_special_char($password);
+        if ($have_special_char) {
+            return '密码含有特殊字符，请修改后重新输入';
+        }
+        if (preg_match("/[\x7f-\xff]/", $password)) {
+            return '密码不能有中文';
+        }
+        $user = $this->user_model->get_by_tel($tel);
+        if (!$user) {
+            return '该手机号还没注册过,请注册';
+        }
+        $data = array('password' => md5($password));
+        $res = $this->user_model->update_by_id($user->id, $data);
+        if (!$res) {
+            return '网络出现了点问题，请稍后再试';
+        }
+        return array("success" => true);
+    }
+
 
     function isName($val)
     {

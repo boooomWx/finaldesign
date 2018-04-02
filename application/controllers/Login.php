@@ -21,7 +21,7 @@ class Login extends Base_Controller {
         if($is_login){
             $this->redirect('/home/index');
         }else{
-            $this->put('login', '登录', null);
+            $this->put('login', '用户登录', null);
         }
     }
 

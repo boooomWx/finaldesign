@@ -48,7 +48,7 @@ include APPPATH . 'views/templates/header.php';
     <div class="simple-goodlist">
         <?php if (!empty($items)): ?>
             <?php foreach ($items as $item): ?>
-                <div class="simple-good-item">
+                <a href="<?php echo base_url().'index.php/item_detail/index?iid='.$item->id;?>"><div class="simple-good-item">
                     <img src="<?php echo $item->image; ?>" class="simple-item-image">
                     <div class="item-desc">
                         <p class="item-title"><?php echo $item->title; ?>一份</p>
@@ -58,7 +58,7 @@ include APPPATH . 'views/templates/header.php';
                         </div>
                     </div>
                     <p class="simple-sold-num lighter-font">已售<?php echo $item->sold_num; ?></p>
-                </div>
+                    </div></a>
                 <hr/>
             <?php endforeach; ?>
         <?php endif; ?>
