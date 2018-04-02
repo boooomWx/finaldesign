@@ -61,7 +61,7 @@ function doRegister() {
             password_validate.attr('placeholder', '两次密码不一致请重试');
             password_validate.css({'border': '1px solid red'});
         } else {
-            $.post('http://'+window.location.host+'/weixing/index.php/register/do_register',{tel:tel.val(),verify_code:verify_code.val(),password_validate:password_validate.val(),password:password.val()},function (data) {
+            $.post('http://'+window.location.host+'/weixing/index.php/register/change_password',{tel:tel.val(),verify_code:verify_code.val(),password_validate:password_validate.val(),password:password.val()},function (data) {
                 if (data.success) {
                     window.location.href='http://'+window.location.host+'/weixing/index.php/login/index';
                 } else {

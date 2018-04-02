@@ -24,12 +24,10 @@ class User extends Base_Controller {
             $this->redirect('/login/index');
         }
         if (empty($user['avatar'])) {
-            $user['avatar'] = base_url() . '/resource/img/nearby-img-1.jpg';
+            $user['avatar'] = base_url() . '/resource/img/default-user-img2.jpg';
         }
-//        $order_info = $this->order_service->get_user_order($user['uid']);
         $data['user'] = $user;
-//        $data['order_info'] = $order_info;
-        $this->put('user', '个人主页', $data);
+        $this->put('user', '订单页面', $data);
 
     }
 
@@ -60,5 +58,20 @@ class User extends Base_Controller {
         $order_detail = $this->order_service->get_order_detail($oid);
         $data['order_detail'] = $order_detail;
         $this->put('order_detail', '订单详情', $data);
+    }
+
+    public function userinfo_get() {
+        $user = $this->session->user;
+        if (empty($user['avatar'])) {
+            $user['avatar'] = base_url() . '/resource/img/default-user-img2.jpg';
+        }
+        $user_info = $this->user_service->get_user_info();
+        $user['address'] = '暂未填写';
+        if (!empty($user_info['address'])) {
+            $user['address'] = $user_info['address'];
+        }
+        $data['user'] = $user;
+
+        $this->put('userinfo', '个人信息', $data);
     }
 }

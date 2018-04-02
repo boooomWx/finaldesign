@@ -1,0 +1,59 @@
+body {
+    padding-top: 30px;
+    background-color: #EBEBEB;
+}
+.nav-top {
+    background-color: black;
+    color: white;
+}
+.page-title {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 135px;
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+hr {
+    margin: 5px;
+}
+.user-avatar-content {
+    width: 20%;
+    margin: 5% 40% 0;
+}
+.user-avatar {
+    width: 75px;
+    border-radius: 75px;
+}
+.user-desc {
+    margin: 20px 0 50px;
+    background-color: white;
+}
+.user-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.user-element-title {
+    width: 30%;
+    font-size: 16px;
+    font-family: 黑体;
+}
+.user-element-desc {
+    font-weight: lighter;
+}
+#avatar-content {
+    padding-top: 5px;
+}
+#avatar {
+    width: 15%;
+}
+.change-password {
+    background-color: white;
+    padding: 5px 0 5px;
+}
+.user-icon {
+    margin-left: 10px;
+    color: gray;
+}

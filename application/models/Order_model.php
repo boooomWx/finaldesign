@@ -24,7 +24,7 @@ class Order_model extends Base_Model
         $status = 1;
         $now = time();
         $result = $this->db->query("INSERT INTO `order` (`iid`, `uid`, `sid`,`status`, `title`, `price`, `num`, `image`, `gmt_create`, `gmt_modified`) VALUES ('$iid','$uid','$sid','$status','$title','$price','$num','$image','$now','$now')");
-        return $result;
+        return $this->db->insert_id();
     }
 
     public function list_by_uid($uid)

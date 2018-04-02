@@ -16,7 +16,7 @@ include APPPATH . 'views/templates/header.php';
         </div>
     </div>
     <div class="user-content">
-        <img src="<?php echo $user['avatar']; ?>" class="user-avatar">
+        <a href="<?php echo base_url().'index.php/user/userinfo';?>"><img src="<?php echo $user['avatar']; ?>" class="user-avatar"></a>
         <p class="user-nick"><?php echo $user['name']; ?></p>
     </div>
     <hr/>

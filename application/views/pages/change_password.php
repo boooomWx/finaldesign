@@ -5,7 +5,7 @@ include APPPATH . 'views/templates/header.php';
 <div class="nav-top navbar-fixed-top">
     <div class="content">
         <i class="fa fa-angle-left fa-2x" onclick="javascript:history.back(-1);"><span
-                    class="page-title border-font"><?php echo $page_title; ?></span></i>
+                class="page-title border-font"><?php echo $page_title; ?></span></i>
     </div>
 </div>
 <div class="register">
@@ -19,7 +19,7 @@ include APPPATH . 'views/templates/header.php';
             </div>
             <input type="password" id="password" class="form-control" placeholder="请输入密码">
             <input type="password" id="password-validate" class="form-control" placeholder="请确认密码">
-            <input type="button" id="submit-button" class="btn btn-info" value="注册"
+            <input type="button" id="submit-button" class="btn btn-info" value="修改密码"
                    style="background-color: orange;border: none">
         </div>
     </div>

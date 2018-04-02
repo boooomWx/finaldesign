@@ -60,6 +60,6 @@ class Trade extends Base_Controller {
     public function success_get(){
         $oid = $this->get('oid');
         $result = $this->trade_service->pay_success($oid);
-        echo $result;
+        $this->redirect('/user/index');
     }
 }
