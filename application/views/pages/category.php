@@ -30,8 +30,8 @@ include APPPATH . 'views/templates/header.php';
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Dropdown link</a></li>
-                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">城西银泰</a></li>
+                    <li><a href="#">西溪印象城</a></li>
                 </ul>
             </div>
 
@@ -42,8 +42,13 @@ include APPPATH . 'views/templates/header.php';
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu">
-                    <li><a href="#">Dropdown link</a></li>
-                    <li><a href="#">Dropdown link</a></li>
+                    <li><a href="#">川菜</a></li>
+                    <li><a href="#">奶茶</a></li>
+                    <li><a href="#">火锅</a></li>
+                    <li><a href="#">江浙菜</a></li>
+                    <li><a href="#">面食</a></li>
+                    <li><a href="#">甜点</a></li>
+                    <li><a href="#">西式快餐</a></li>
                 </ul>
             </div>
 
@@ -105,3 +110,4 @@ include APPPATH . 'views/templates/header.php';
 <?php
 include APPPATH . 'views/templates/footer.php';
 ?>
+

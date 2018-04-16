@@ -57,7 +57,7 @@ class User_Service extends Base_Service {
                 $data = array(
                     'uid' => $tel_res->id,
                     'name' => $tel_res->name,
-                    'avatar' => $tel_res->avatar,
+                    'avatar' => $tel_res->avatar ?: base_url().'/resource/img/default-user-img2.jpg',
                     'tel' => $tel,
                     'password' => md5($password)
                 );
@@ -155,6 +155,14 @@ class User_Service extends Base_Service {
             return true;
         }
         return false;
+    }
+
+    public function change_userinfo($scene, $scene_content) {
+        $user = $this->session->user;
+        $uid = $user['uid'];
+        $data[$scene] = $scene_content;
+        $result = $this->user_model->update_by_id($uid, $data);
+        return $result;
     }
 
 }

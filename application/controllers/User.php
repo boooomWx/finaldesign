@@ -74,4 +74,61 @@ class User extends Base_Controller {
 
         $this->put('userinfo', '个人信息', $data);
     }
+
+    public function userinfo_change_get() {
+        $scene = $this->get('scene');
+        $scene_content = $this->get('scene_content');
+        if (!$scene || !$scene_content) {
+            $this->api_error('信息没填写完全');
+        }
+        $result = $this->user_service->change_userinfo($scene, $scene_content);
+        if ($result) {
+            $user = $this->session->user;
+            $user['name'] = $scene_content;
+            $this->session->user = $user;
+            $this->api_success(array());
+        } else {
+            $this->api_error('服务器出了点问题，请稍候再试');
+        }
+    }
+
+    public function name_change_get() {
+        $user = $this->session->user;
+        if (!$user) {
+            $this->redirect('/login/index');
+        }
+        $data['name'] = $user['name'];
+        $this->put('change_name','修改名字', $data);
+    }
+
+    public function avatar_change_get() {
+        $user = $this->session->user;
+        if (!$user) {
+            $this->redirect('/login/index');
+        }
+        $data['avatar'] = $user['avatar'];
+        $this->put('change_avatar','个人头像', $data);
+    }
+
+    public function change_avatar_post() {
+        $avatar = $this->upload('avatar','avatar');
+        if ($avatar['status'] === FALSE) {
+            $this->api_error('服务器有点调皮，请稍候再试');
+        }
+        $result = $this->user_service->change_userinfo('avatar', $avatar['result']);
+        if ($result) {
+            $user = $this->session->user;
+            $user['avatar'] = $avatar['result'];
+            $this->session->user = $user;
+            $this->redirect('/user/avatar_change');
+        } else {
+            $this->api_error('服务器出了点问题，请稍候再试');
+        }
+    }
+
+    public function exit_get() {
+        $this->session->sess_destroy();
+        $this->redirect('/home/index');
+    }
+
 }

@@ -1,0 +1,30 @@
+body {
+    padding: 30px 0 70px;
+    background-color: rgba(4,1,6,0.89);
+}
+.content {
+    width: 94%;
+    margin-left: 3%;
+}
+/**头部返回栏**/
+.nav-top {
+    background-color: black;
+    color: white;
+}
+.page-title {
+    font-size: 16px;
+    line-height: 28px;
+    padding-left: 135px;
+}
+.change_content {
+    margin-top: 100px;
+}
+#avatar-img {
+    width: 100%;
+}
+#submit {
+    background-color: orange;
+    position: absolute;
+    right: 20px;
+    margin-top: 10px;
+}
