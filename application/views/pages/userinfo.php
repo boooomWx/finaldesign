@@ -24,15 +24,20 @@ include APPPATH . 'views/templates/header.php';
 
 <div class="user-desc">
     <div class="content">
+        <a href="<?php echo base_url().'index.php/user/avatar_change'?>">
         <div class="user-element" id="avatar-content">
             <p class="user-element-title">头像</p>
-                <img class="user-element-desc" id="avatar" src="<?php echo $user['avatar']; ?>"/>
+            <img class="user-element-desc" id="avatar" src="<?php echo $user['avatar']; ?>"/>
         </div>
+        </a>
         <hr/>
-        <div class="user-element">
-            <p class="user-element-title">昵称</p>
-            <p class="user-element-desc" id="name"><?php echo $user['name']; ?><i class="fa fa-angle-right fa-2x user-icon"></i></p>
-        </div>
+        <a href="<?php echo base_url().'index.php/user/name_change'?>">
+            <div class="user-element">
+                <p class="user-element-title">昵称</p>
+                <p class="user-element-desc" id="name"><?php echo $user['name']; ?><i
+                            class="fa fa-angle-right fa-2x user-icon"></i></p>
+            </div>
+        </a>
         <hr/>
         <div class="user-element">
             <p class="user-element-title">电话号码</p>
@@ -41,7 +46,8 @@ include APPPATH . 'views/templates/header.php';
         <hr/>
         <div class="user-element">
             <p class="user-element-title">我的地址</p>
-            <p class="user-element-desc" id="tel"><?php echo $user['address']; ?><i class="fa fa-angle-right fa-2x user-icon"></i></p>
+            <p class="user-element-desc" id="tel"><?php echo $user['address']; ?><i
+                        class="fa fa-angle-right fa-2x user-icon"></i></p>
         </div>
         <hr/>
     </div>
@@ -49,9 +55,13 @@ include APPPATH . 'views/templates/header.php';
 
 <div class="change-password">
     <div class="content">
-        <a href="<?php echo base_url().'index.php/register/change_password';?>"><div class="user-element">
-            <p class="user-element-title">修改密码</p>
-            <i class="fa fa-angle-right fa-2x user-icon"></i>
-            </div></a>
+        <a href="<?php echo base_url() . 'index.php/register/change_password'; ?>">
+            <div class="user-element">
+                <p class="user-element-title">修改密码</p>
+                <i class="fa fa-angle-right fa-2x user-icon"></i>
+            </div>
+        </a>
     </div>
 </div>
+
+<a href="<?php echo base_url().'index.php/user/exit';?>"><button class="btn" style="background-color: orange;color:white;width: 100%;margin-top: 30px;">退出登录</button></a>

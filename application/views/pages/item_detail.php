@@ -96,9 +96,9 @@ include APPPATH . 'views/templates/header.php';
                 <hr/>
             <?php endforeach; ?>
         <?php else: ?>
-            <div class="comment-error">
+            <a href="<?php echo base_url().'index.php/comment/index?iid='.$item_detail->id?>"><div class="comment-error">
                 <p class="comment-error-content"><i class="fa fa-pencil-square-o fa-2x"></i>写评论</p>
-            </div>
+            </div></a>
         <?php endif; ?>
     </div>
 </div>

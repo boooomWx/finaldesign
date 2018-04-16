@@ -87,6 +87,9 @@ hr{
     display: flex;
     align-items: flex-start;
 }
+.comment-info {
+    width: 84%;
+}
 .user-avatar {
     width: 13%;
 }

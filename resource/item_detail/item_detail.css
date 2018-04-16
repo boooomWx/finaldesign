@@ -89,6 +89,9 @@ body {
 .user-avatar {
     width: 13%;
 }
+.comment-info {
+    width: 84%;
+}
 .user-nick-part {
     display: flex;
     justify-content: space-between;

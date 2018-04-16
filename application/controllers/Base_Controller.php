@@ -113,4 +113,37 @@ class Base_Controller extends REST_Controller
     public function redirect($redirect_uri) {
         redirect(base_url().'index.php'.$redirect_uri);
     }
+
+    /**
+     * 封装上传函数
+     */
+    public function upload($module,$file){
+        $savePath = './upload/'.$module.'/'.date('Y-m');
+        if (! file_exists ( $savePath )) {
+            mkdir ( "$savePath", 0777, true );
+        }
+        $config['upload_path'] = $savePath;
+        $config['allowed_types'] = 'gif|jpg|png|jpeg';
+        $config['max_size'] = 2048;
+        $config['encrypt_name'] = TRUE;
+        $this->load->library('upload', $config);
+        if ( ! $this->upload->do_upload($file))
+        {
+            $error = $this->upload->display_errors();
+            return [
+                'status' => FALSE,
+                'result' => $error
+            ];
+
+        }
+        else
+        {
+            $data = $this->upload->data('file_name');
+            $filePath = base_url().'upload/'.$module.'/'.date('Y-m').'/'.$data;
+            return [
+                'status' => TRUE,
+                'result' => $filePath
+            ];
+        }
+    }
 }

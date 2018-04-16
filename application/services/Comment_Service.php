@@ -37,4 +37,15 @@ class Comment_Service extends Base_Service {
         }
         return $comments;
     }
+
+    public function save_comment($iid, $score, $content, $images)
+    {
+        $user = $this->session->user;
+        if (!$user) {
+            return false;
+        }
+        $uid = $user['uid'];
+        $result = $this->comment_model->add($iid, $uid, $score, $content, $images);
+        return $result;
+    }
 }

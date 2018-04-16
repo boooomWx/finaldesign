@@ -21,7 +21,7 @@ include APPPATH . 'views/templates/header.php';
         <p class="order-remind">您有订单尚未付款成功！请尽快支付</p>
     <?php endif; ?>
 
-    <div class="order-detail-part">
+    <a href="<?php echo base_url().'index.php/item_detail/index?iid='. $order_detail->iid?>"><div class="order-detail-part">
         <img src="<?php echo $order_detail->image;?>" class="order-detail-img">
         <div class="order-detail-desc">
             <p class="order-detail-title border-font"><?php echo $order_detail->title;?></p>
@@ -29,7 +29,7 @@ include APPPATH . 'views/templates/header.php';
             <p class="order-price border-font">售价：￥<?php echo $order_detail->price;?></p>
         </div>
         <p><i class="fa fa-angle-right fa-2x order-detail-icon"></i></p>
-    </div>
+    </div></a>
     <p class="order-total-price border-font">总价：￥<?php echo $order_detail->price*$order_detail->num;?></p>
     <p class="order-num border-font">数量：<?php echo $order_detail->num;?></p>
 <hr/>

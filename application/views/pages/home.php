@@ -11,56 +11,76 @@ include APPPATH . 'views/templates/header.php';
 ?>
 <div class="container">
     <div class="userinfo-nav">
-        <p id="city-location"><a href="<?php echo base_url().'/index.php/map/index'?>" style="color: white">杭州<span class="caret"></span></a></p>
+        <p id="city-location"><a href="<?php echo base_url() . '/index.php/map/index' ?>" style="color: white">杭州<span
+                        class="caret"></span></a></p>
         <i class="search-icon fa fa-search fa-1x"></i>
         <input type="text" id="search-input" placeholder="输入商户名、地点，找美食" class="search-box">
-        <a id="user-icon" href="<?php echo base_url().'index.php/user/index';?>"><i class="fa fa-user-circle fa-2x"></i></a>
+        <a id="user-icon" href="<?php echo base_url() . 'index.php/user/index'; ?>"><i
+                    class="fa fa-user-circle fa-2x"></i></a>
     </div>
 </div>
 
 
 <div class="category_nav">
     <div class="category-item">
-        <a href="<?php echo base_url().'index.php/item/category_item?category=hot_pot'?>">
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=sichuan' ?>">
             <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-            <p class="category_desc">美食</p>
+            <p class="category_desc">川菜</p>
         </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=tea_milk' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/nav_3.png' ?>"/>
+            <p class="category_desc">奶茶</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=hot_pot' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/nav_2.png' ?>"/>
+            <p class="category_desc">火锅</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=jiangzhe' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/rice.png' ?>"/>
+            <p class="category_desc">江浙菜</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=noodle' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/hot_pot.png' ?>"/>
+            <p class="category_desc">面食</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=dessert' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/dessert.png' ?>"/>
+            <p class="category_desc">甜点</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=western_food' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/western_food.png' ?>"/>
+            <p class="category_desc">西式快餐</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=fruit' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/fruit.png' ?>"/>
+            <p class="category_desc">水果</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item?category=seafood' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/fish.png' ?>"/>
+            <p class="category_desc">海鲜</p>
+        </a>
     </div>
     <div class="category-item">
-        <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
-        <p class="category_desc">美食</p>
+        <a href="<?php echo base_url() . 'index.php/item/category_item' ?>">
+            <img class="category_img" src="<?php echo base_url() . '/resource/img/category_icon_1.png' ?>"/>
+            <p class="category_desc">其他</p>
+        </a>
     </div>
 </div>
 
